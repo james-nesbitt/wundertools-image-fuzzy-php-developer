@@ -3,10 +3,13 @@
 # This images extends the base php image by enabled a few developer oriented
 # extensions and increasing some of the PHP settings for memory etc.
 #
-FROM quay.io/wunder/alpine-php
+FROM quay.io/wunder/wundertools-image-fuzzy-php
 MAINTAINER docker@wunder.io
 
-RUN apk --update add php7-xdebug
+RUN apk --update add php7-xdebug && \
+    # Cleanup
+    rm -rf /tmp/* && \
+    rm -rf /var/cache/apk/*
 
 ####
 # Override nginx configuration for Drupal site
