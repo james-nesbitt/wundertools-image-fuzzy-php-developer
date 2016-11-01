@@ -4,11 +4,9 @@ A wundertools docker image for PHP-FPM service that is better tuned for web appl
 and meant to be used in development scenarios, where a more lenient environment may be 
 needed. and where error output can be allowed.
 
-## Container
-
-### Maintained
-
 Maintained by: James Nesbitt <james.nesbitt@wunder.io>
+
+## Container
 
 ### Image
 
@@ -18,8 +16,7 @@ This image is available publicly as:
 
 ### Base
 
-This image is heavily based on the fuzzy-php image, and only adds some
-PHP ini settings files.
+This image is heavily based on the fuzzy-php image, and only adds some PHP ini settings files.
 
 ### Modifications
 
