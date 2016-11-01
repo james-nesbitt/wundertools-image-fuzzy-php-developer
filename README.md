@@ -16,26 +16,43 @@ This image is available publicly as:
 
 - quay.io/wunder/wundertools-image-fuzzy-php-developer : [![Docker Repository on Quay](https://quay.io/repository/wunder/wundertools-image-fuzzy-php-developer/status "Docker Repository on Quay")](https://quay.io/repository/wunder/wundertools-image-fuzzy-php-developer)
 
-## Base
+### Base
 
 This image is heavily based on the fuzzy-php image, and only adds some
 PHP ini settings files.
 
-## Additions
+### Modifications
 
 This image adds the following files:
 
 ### /etc/php7/conf.d/30_xdebug.ini
 
+1. enable php-xdebug extension
+2. tune the extension to make it work with PHPSTORM
 
+### /etc/php7/conf.d/95_wunderdev.ini
 
-### /etc/php7/conf.d/zz_wunderdev.ini
+1. allow easy increasing of memory
+2. make php show errors
 
+## Using this Image
 
+run this container as an independent service:
 
-## Development
+```
+$/> docker run -d quay.io/wunder/wundertools-image-fuzzy-php-developer
+```
 
-- If you want to change the configuration of this image and build it locally for testing you can do that by running:
-~~~
-docker build --pull --no-cache -t quay.io/wunder/wundertools-image-fuzzy-php-developer .
-~~~
+map any needed services such as memcache and dbs, and mount any source code volumes to whatever path needed:
+
+```
+$/> docker run -d \
+      -v "$(pwd):/app/web" \
+      -l "my_running_db_container:db.app" \
+      -l "my_running_redis_container:redis.app" \
+      quay.io/wunder/wundertools-image-fuzzy-php-developer
+```
+
+## TODO
+
+1. some kind of automated testing would be usefull.
