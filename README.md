@@ -14,7 +14,7 @@ Maintained by: James Nesbitt <james.nesbitt@wunder.io>
 
 This image is available publicly as:
 
-- quay.io/wunder/wundertools-image-fuzzy-php-developer : [![Docker Repository on Quay](https://quay.io/repository/wunder/wundertools-image-fuzzy-php-developer/status "Docker Repository on Quay")](https://quay.io/repository/wunder/wundertools-image-fuzzy-php)
+- quay.io/wunder/wundertools-image-fuzzy-php-developer : [![Docker Repository on Quay](https://quay.io/repository/wunder/wundertools-image-fuzzy-php-developer/status "Docker Repository on Quay")](https://quay.io/repository/wunder/wundertools-image-fuzzy-php-developer)
 
 ## Base
 
