@@ -4,7 +4,7 @@
 # extensions and increasing some of the PHP settings for memory etc.
 #
 FROM quay.io/wunder/wundertools-image-fuzzy-php
-MAINTAINER docker@wunder.io
+MAINTAINER james.nesbitt@wunder.io
 
 RUN apk --update add php7-xdebug && \
     # Cleanup
