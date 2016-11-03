@@ -3,7 +3,7 @@
 # This images extends the base php image by enabled a few developer oriented
 # extensions and increasing some of the PHP settings for memory etc.
 #
-# VERSION v7.0.12-1
+# VERSION v7.0.12-2
 #
 FROM quay.io/wunder/fuzzy-alpine-php-fpm:v7.0.12
 MAINTAINER james.nesbitt@wunder.io
