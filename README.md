@@ -1,7 +1,7 @@
-# wundertools-image-fuzzy-php-developer
+# image-fuzzy-alpine-php-dev
 
-A wundertools docker image for PHP-FPM service that is better tuned for web applications
-and meant to be used in development scenarios, where a more lenient environment may be 
+A docker image for PHP-FPM service that is better tuned for web applications
+and meant to be used in development scenarios, where a more lenient environment may be
 needed. and where error output can be allowed.
 
 Maintained by: James Nesbitt <james.nesbitt@wunder.io>
@@ -12,11 +12,11 @@ Maintained by: James Nesbitt <james.nesbitt@wunder.io>
 
 This image is available publicly as:
 
-- quay.io/wunder/wundertools-image-fuzzy-php-developer : [![Docker Repository on Quay](https://quay.io/repository/wunder/wundertools-image-fuzzy-php-developer/status "Docker Repository on Quay")](https://quay.io/repository/wunder/wundertools-image-fuzzy-php-developer)
+- quay.io/wunder/fuzzy-alpine-php-dev : [![Docker Repository on Quay](https://quay.io/repository/wunder/fuzzy-alpine-php-dev/status "Docker Repository on Quay")](https://quay.io/repository/wunder/fuzzy-alpine-php-dev)
 
 ### Base
 
-This image is heavily based on the fuzzy-php image, and only adds some PHP ini settings files.
+This image is heavily based on the fuzzy-php-fpm image, and only adds some PHP ini settings files.
 
 ### Modifications
 
@@ -37,7 +37,7 @@ This image adds the following files:
 run this container as an independent service:
 
 ```
-$/> docker run -d quay.io/wunder/wundertools-image-fuzzy-php-developer
+$/> docker run -d quay.io/wunder/fuzzy-alpine-php-dev
 ```
 
 map any needed services such as memcache and dbs, and mount any source code volumes to whatever path needed:
@@ -47,7 +47,7 @@ $/> docker run -d \
       -v "$(pwd):/app/web" \
       -l "my_running_db_container:db.app" \
       -l "my_running_redis_container:redis.app" \
-      quay.io/wunder/wundertools-image-fuzzy-php-developer
+      quay.io/wunder/fuzzy-alpine-php-dev
 ```
 
 ## TODO
