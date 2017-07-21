@@ -5,10 +5,10 @@
 #
 # VERSION v7.1.5-0
 #
-FROM quay.io/wunder/fuzzy-alpine-php-fpm:v7.1.5-0-pre
+FROM quay.io/wunder/fuzzy-alpine-php-fpm:v7.1.5-0-pre2
 MAINTAINER james.nesbitt@wunder.io
 
-RUN apk --update add php7-xdebug && \
+RUN apk --no-cache --update add php7-xdebug && \
     # Cleanup
     rm -rf /tmp/* && \
     rm -rf /var/cache/apk/*
