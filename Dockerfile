@@ -3,9 +3,9 @@
 # This images extends the base php image by enabled a few developer oriented
 # extensions and increasing some of the PHP settings for memory etc.
 #
-# VERSION v7.0.12-2
+# VERSION v7.1.5-0
 #
-FROM quay.io/wunder/fuzzy-alpine-php-fpm:v7.0.12
+FROM quay.io/wunder/fuzzy-alpine-php-fpm:v7.1.5-0-pre
 MAINTAINER james.nesbitt@wunder.io
 
 RUN apk --update add php7-xdebug && \
